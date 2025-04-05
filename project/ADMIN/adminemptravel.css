@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    background: url('https://wallpaperaccess.com/full/185289.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003366 !important;
+    padding: 12px 20px;
+}
+
+/* Table Styling */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Modal Styling */
+.modal-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.scale-up {
+    transition: transform 0.3s ease-in-out;
+}
+
+.scale-up:hover {
+    transform: scale(1.1);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-text {
+        font-size: 1.2rem;
+    }
+    
+    .footer {
+        font-size: 12px;
+    }
+}

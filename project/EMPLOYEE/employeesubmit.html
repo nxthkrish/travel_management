@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edit and resubmit your travel request with necessary details at Reflections Travel Management System.">
+    <meta name="keywords" content="Travel Request, Employee Travel, Manager Clarifications, Business Travel, Corporate Travel">
+    <meta name="author" content="Reflections Info Global">
+    <title>Submitted Travel Request - Reflections</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="employeesubmit.css">
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Reflections</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="login.html" class="btn btn-outline-light me-2">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light"><i class="fas fa-bell"></i> Notifications</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="container-box">
+                    <h1 class="text-primary h4">Edit Travel Request</h1>
+                    <hr>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Employee Name</strong></label>
+                                <input type="text" class="form-control" value="John Doe" disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Request ID</strong></label>
+                                <input type="text" class="form-control" value="#12345" disabled>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>From Location</strong></label>
+                                <input type="text" class="form-control" value="Trivandrum">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>To Location</strong></label>
+                                <input type="text" class="form-control" value="Ernakulam">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Preferred Travel Mode</strong></label>
+                                <select class="form-select">
+                                    <option selected>Air</option>
+                                    <option>Train</option>
+                                    <option>Car</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Lodging Required</strong></label>
+                                <select class="form-select">
+                                    <option selected>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Travel From</strong></label>
+                                <input type="date" class="form-control" value="2025-03-10">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Travel To</strong></label>
+                                <input type="date" class="form-control" value="2025-03-15">
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label class="form-label"><strong>Purpose of Travel</strong></label>
+                            <textarea class="form-control" rows="3">Attending a business conference.</textarea>
+                        </div>
+                        <div class="mt-3">
+                            <label class="form-label"><strong>Additional Requests</strong></label>
+                            <textarea class="form-control" rows="3">Window seat preferred, vegetarian meal.</textarea>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-success btn-custom">Resubmit</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mt-3 mt-lg-0">
+                <div class="container-box message-box">
+                    <h2 class="text-danger h5"><i class="fas fa-exclamation-circle"></i> Manager's Clarification</h2>
+                    <p>The purpose of travel seems unclear. Please provide a more detailed explanation of why this trip is necessary.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <button class="btn btn-lg btn-back" onclick="window.location.href='employeeDashboard.html'">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS (Async for performance) -->
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

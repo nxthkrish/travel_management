@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin dashboard for managing employee travel requests at Reflections. View, approve, and manage employee travel requests efficiently.">
+    <meta name="keywords" content="Admin Dashboard, Travel Requests, Employee Management, Business Travel">
+    <meta name="author" content="Reflections Info Global">
+    <title>Admin - Travel Requests | Reflections</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="adminemptravel.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Reflections</a>
+            <span class="navbar-text text-white mx-auto fw-bold">Travel Requests</span>
+            <div class="d-flex flex-wrap">
+                <a href="adminlogin.html" class="btn btn-outline-light me-2">Logout</a>
+                <button class="btn btn-outline-light"><i class="fas fa-bell"></i> Notifications</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow p-4 fade-in">
+                    <h1 class="text-center mb-4">Employee Travel Requests</h1>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Employee Name</th>
+                                    <th>Employee ID</th>
+                                    <th>Assigned Manager</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Purpose</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Amit Sharma</td>
+                                    <td>EMP001</td>
+                                    <td>Rajesh Kumar</td>
+                                    <td>Mumbai</td>
+                                    <td>Delhi</td>
+                                    <td>Client Meeting</td>
+                                    <td class="text-success fw-bold">Approved</td>
+                                    <td><button class="btn btn-danger btn-sm scale-up" onclick="openModal('Close Request for Amit Sharma')">Close Request</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Priya Verma</td>
+                                    <td>EMP002</td>
+                                    <td>Sunil Mehta</td>
+                                    <td>Bangalore</td>
+                                    <td>Hyderabad</td>
+                                    <td>Project Discussion</td>
+                                    <td class="text-success fw-bold">Approved</td>
+                                    <td><button class="btn btn-danger btn-sm scale-up" onclick="openModal('Close Request for Priya Verma')">Close Request</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Rahul Singh</td>
+                                    <td>EMP003</td>
+                                    <td>Anita Joshi</td>
+                                    <td>Chennai</td>
+                                    <td>Pune</td>
+                                    <td>Training Session</td>
+                                    <td class="text-warning fw-bold">Pending</td>
+                                    <td><button class="btn btn-info btn-sm scale-up" onclick="openModal('Request Clarification for Rahul Singh')">Request Clarification</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Manish Gupta</td>
+                                    <td>EMP005</td>
+                                    <td>Arun Khanna</td>
+                                    <td>Jaipur</td>
+                                    <td>Ahmedabad</td>
+                                    <td>Conference</td>
+                                    <td class="text-danger fw-bold">Rejected</td>
+                                    <td><button class="btn btn-warning btn-sm scale-up" onclick="openModal('Request Further Clarification for Manish Gupta')">Request Further Clarification</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="actionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Action</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="4" placeholder="Enter your note here..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 text-center">
+        <div class="container">
+            <span>© 2025 Reflections Info Global. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(title) {
+            document.getElementById('modalTitle').innerText = title;
+            new bootstrap.Modal(document.getElementById('actionModal')).show();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+/* General Styles */
+body {
+    background: url('https://wallpaperaccess.com/full/185289.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+}
+
+/* Form Styling */
+.form-label {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.form-control {
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-danger {
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Icon Styling */
+.fa-user-shield {
+    font-size: 4rem;
+    color: #dc3545;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .login-container {
+        width: 90%;
+    }
+}

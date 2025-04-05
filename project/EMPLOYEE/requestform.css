@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    background: url('https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: fadeIn 1.5s ease-in-out;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #083e77;
+    animation: fadeInDown 1s ease-in-out;
+}
+.navbar .navbar-brand, .navbar .navbar-text, .navbar .btn {
+    color: white !important;
+}
+
+/* Dashboard & Form Container */
+.dashboard-container, .form-container {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Buttons */
+.btn-custom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #003366;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1rem;
+}
+.btn-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tables */
+table tbody tr {
+    transition: transform 0.3s ease;
+}
+table tbody tr:hover {
+    transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

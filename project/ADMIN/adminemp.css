@@ -1,0 +1,94 @@
+/* General Layout */
+body {
+    background: url('https://wallpaperaccess.com/full/185289.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #003366;
+    padding: 10px 20px;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+.navbar-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Ensure Main Content Takes Full Space */
+.container {
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+/* Employee Table */
+.table {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+/* Buttons */
+.btn-outline-light {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #003366;
+}
+
+/* Sticky Footer */
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* Flexbox for Sticky Footer */
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
