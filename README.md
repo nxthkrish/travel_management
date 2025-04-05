@@ -1,2 +1,1 @@
-# travel_management
-Created as part of Assesment 
+The design is given in the project folder
